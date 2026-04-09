@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">SurfelSplat: Learning Efficient and Generalizable <br> Gaussian Surfel Representations for Sparse-View <br> Surface Reconstruction</h1>
+  <h1 align="center">SurfelSplat: Learning Efficient and Generalizable  Gaussian Surfel Representations for Sparse-View Surface Reconstruction</h1>
   <h3 align="center">NeurIPS 2025</h3>
   <h3 align="center"><a href="https://openreview.net/pdf?id=0sUihPtncP">Paper</a> | <a href="">Pretrained Models</a></h3>
 </p>
