@@ -1,0 +1,47 @@
+# @package _global_
+
+defaults:
+  - override /dataset: re10k
+  - override /model/encoder: costvolume
+  - override /loss: [geo,mse] # [mse] or [mse, lpips, flat, geo]
+
+wandb:
+  name: re10k
+  tags: [re10k, 256x256]
+
+data_loader:
+  train:
+    batch_size: 2  
+
+trainer:
+  max_steps: 100000 
+
+# ----- Additional params for default best model customization
+model:
+  encoder:
+    num_depth_candidates: 640   
+    costvolume_unet_feat_dim: 192 # 128
+    costvolume_unet_channel_mult: [1,2,2] # [1,1,1]
+    costvolume_unet_attn_res: [4,8] # [4]
+    gaussians_per_pixel: 1
+    depth_unet_feat_dim: 64 # 32
+    depth_unet_attn_res: [8,16] # [16]
+    depth_unet_channel_mult: [1,1,2,2,2] # [1,1,2,2,2]  [1,1,1,1,1]
+
+# lpips loss
+loss:
+  lpips:
+    apply_after_step: 0
+    weight: 0.05
+
+dataset: 
+  image_shape: [256, 320]
+  roots: [datasets/torch_data]
+  near: 1.5
+  far: 4.525
+  baseline_scale_bounds: false
+  make_baseline_1: false
+
+test:
+  eval_time_skip_steps: 5
+  compute_scores: true

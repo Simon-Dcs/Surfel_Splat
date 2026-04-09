@@ -1,0 +1,4 @@
+name: evaluation
+
+index_path: outputs/evaluation_index_scannet/evaluation_index.json
+num_context_views: 2

@@ -1,0 +1,7 @@
+geo:
+  weight: 1.0               # Overall loss weight.
+  apply_after_step: 0       # Enable immediately.
+  l1_weight: 0.9            # L1 term weight for edge preservation.
+  l2_weight: 0.1            # L2 term weight for smoothing.
+  use_si_loss: false        # Enable the scale-invariant depth term.
+  si_weight: 0.0            # Scale-invariant term weight.

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.so
+*.pth
+*.ckpt
+
+.DS_Store
+
+outputs/
+point_clouds/
+checkpoints/
+gs2mesh/
+
+src/journal/
+src/model/encoder/encoder_costvolume.py.backup_3x4x5
+src/paper/test_norm.py
