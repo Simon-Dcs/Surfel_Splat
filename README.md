@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">SurfelSplat: Learning Efficient and Generalizable  Gaussian Surfel Representations for Sparse-View Surface Reconstruction</h1>
   <h3 align="center">NeurIPS 2025</h3>
-  <h3 align="center"><a href="https://openreview.net/pdf?id=0sUihPtncP">Paper</a> | <a href="">Pretrained Models</a></h3>
+  <h3 align="center"><a href="https://arxiv.org/abs/2604.08370">Paper</a> | <a href="https://drive.google.com/file/d/11m6sbfPQDMKlIYYH2Z628UjGO1ASPuLm/view?usp=sharing">Pretrained Models</a></h3>
 </p>
 
 
@@ -11,16 +11,18 @@ Create a Python 3.10 environment and install the dependencies:
 
 ```bash
 git clone https://github.com/Simon-Dcs/Surfel_Splat.git
-cd SurfelSplat
+cd Surfel_Splat
 conda create -n surfelsplat python=3.10
 conda activate surfelsplat
 pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
-pip install -r requirements.txt
+pip install --no-build-isolation -r requirements.txt
 ```
+
+* If you encounter problems like `ModuleNotFoundError: No module named 'pkg_resources'`,try to run `pip install "setuptools<82"`
 
 ## Checkpoints
 
-Download the SurfelSplat checkpoint [here]() and place it under `checkpoints/`.
+Download the SurfelSplat checkpoint [here](https://drive.google.com/file/d/11m6sbfPQDMKlIYYH2Z628UjGO1ASPuLm/view?usp=sharing) and place it under `checkpoints/`.
 
 The UniMatch backbone weights are also required:
 
@@ -33,7 +35,7 @@ wget 'https://s3.eu-central-1.amazonaws.com/avg-projects/unimatch/pretrained/gmd
 
 The codebase uses chunked dataset files in the same general style as pixelSplat. You should prepare your datasets into the format expected by the loaders in `src/dataset/`.
 
-We present our preprocessed dataset [here](). By default, the config points to:
+We present our preprocessed dataset [here](https://drive.google.com/file/d/1nA43vPn6yyVSyhyFkLdSEQlJlhdD_eJi/view?usp=sharing). By default, the config points to:
 
 ```text
 datasets/torch_data
