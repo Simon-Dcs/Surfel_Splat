@@ -15,10 +15,11 @@ cd Surfel_Splat
 conda create -n surfelsplat python=3.10
 conda activate surfelsplat
 pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
-pip install --no-build-isolation -r requirements.txt
+pip install --no-build-isolation -r requirements_w_versions.txt
 ```
 
 * If you encounter problems like `ModuleNotFoundError: No module named 'pkg_resources'`,try to run `pip install "setuptools<82"`
+* If you encounter `numpy` version problems, please run `pip install numpy==1.26.3`
 
 ## Checkpoints
 
